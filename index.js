@@ -43,7 +43,7 @@ app.get("/api/info", (req, res) => {
     `);
 });
 
-const port = 3500;
+const port = process.env.PORT || 3500;
 app.listen(port);
 
 console.log(`app is running on http://localhost:${port}`);

@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
+app.use(express.static("dist"));
 
 let data = [
   {
@@ -30,7 +31,7 @@ let data = [
   },
 ];
 
-app.get("/api/persons", (req, res) => {
+app.get("/api/numbers", (req, res) => {
   res.json(data);
 });
 
